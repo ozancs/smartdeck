@@ -1,6 +1,7 @@
 # SmartDeck
-
+![Screenshot_15](https://github.com/user-attachments/assets/1aec9e52-7d8d-423a-9e10-12daaef4f580)
 <div align="center">
+
 
 **A powerful, customizable macro deck application for Windows**
 
@@ -11,6 +12,15 @@
 ## 📖 Overview
 
 SmartDeck is a feature-rich desktop application that transforms physical touch screens into powerful macro control panels. It provides an intuitive interface for creating custom buttons that can execute keyboard shortcuts, launch applications, control media, run scripts, and much more. Perfect for streamers, content creators, developers, and power users who want to streamline their workflow.
+
+***Correction : ESP32_8048S043 is JC8048W550 Screen's Firmware. (Guition Black PCB, Capatitive 5" 800x480)
+
+5" Guition Capatitive https://www.aliexpress.us/item/3256806529267135.html?gatewayAdapt=glo2usa4itemAdapt
+
+3.5" Capatitive Display https://www.aliexpress.us/item/3256805963246872.html
+
+7" Capatitive Display https://www.tindie.com/products/adz1122/esp32-s3-7-inch-arduino-lcd-lvgl-development-board/?spm=a2g0s.imconversation.0.0.70ae3e5fybmV4K
+
 
 ## ✨ Key Features
 
@@ -30,6 +40,9 @@ SmartDeck supports a comprehensive range of button actions:
 10. **Mouse Actions** - Click, double-click, move, and drag operations
 11. **Counter** - Increment/decrement counters with long-press reset
 12. **Sound** - Play audio files with volume control
+
+
+![Screenshot_17](https://github.com/user-attachments/assets/cd9b04b3-6aa7-4df8-9465-15fd3973a675)
 
 ### 🎨 **Customization**
 
@@ -95,6 +108,10 @@ Built-in support for 7 languages:
 2. **Run the installer** and follow the setup wizard
 3. **Connect your device** via USB
 4. **Flash the firmware** using the built-in firmware installer (⚡ Install Firmware button)
+
+
+![Screenshot_16](https://github.com/user-attachments/assets/2d39f30d-3a07-4f91-ad30-1c0c40b035a7)
+
 
 ## 🎯 How It Works
 
@@ -199,13 +216,6 @@ Toggle buttons have two states with independent configurations:
 
 Contributions are welcome! Please feel free to submit pull requests or open issues for bugs and feature requests.
 
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 👨‍💻 Author
-
-**Ozan Sahin** - [@ozancs](https://github.com/ozancs)
 
 ## 🙏 Acknowledgments
 
