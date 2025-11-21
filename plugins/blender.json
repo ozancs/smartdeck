@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "id": "blender",
+    "name": "Blender",
+    "author": "SmartDeck",
+    "version": "1.0.0",
+    "description": "3D Modeling shortcuts."
+  },
+  "buttons": [
+    {
+      "label": "Grab/Move",
+      "type": "key",
+      "combos": {
+        "win": "G",
+        "mac": "G"
+      },
+      "icon": "online:mdi:cursor-move",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Rotate",
+      "type": "key",
+      "combos": {
+        "win": "R",
+        "mac": "R"
+      },
+      "icon": "online:mdi:rotate-right",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Scale",
+      "type": "key",
+      "combos": {
+        "win": "S",
+        "mac": "S"
+      },
+      "icon": "online:mdi:resize",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Extrude",
+      "type": "key",
+      "combos": {
+        "win": "E",
+        "mac": "E"
+      },
+      "icon": "online:mdi:table-column-plus-after",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Inset",
+      "type": "key",
+      "combos": {
+        "win": "I",
+        "mac": "I"
+      },
+      "icon": "online:mdi:vector-square",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Bevel",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+B",
+        "mac": "GUI+B"
+      },
+      "icon": "online:mdi:shape-outline",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Loop Cut",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+R",
+        "mac": "GUI+R"
+      },
+      "icon": "online:mdi:grid",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Add Mesh",
+      "type": "key",
+      "combos": {
+        "win": "SHIFT+A",
+        "mac": "SHIFT+A"
+      },
+      "icon": "online:mdi:cube-outline",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Search",
+      "type": "key",
+      "combos": {
+        "win": "F3",
+        "mac": "F3"
+      },
+      "icon": "online:mdi:magnify",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Render",
+      "type": "key",
+      "combos": {
+        "win": "F12",
+        "mac": "F12"
+      },
+      "icon": "online:mdi:camera-iris",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Wireframe",
+      "type": "key",
+      "combos": {
+        "win": "Z",
+        "mac": "Z"
+      },
+      "icon": "online:mdi:grid-large",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Edit/Obj",
+      "type": "key",
+      "combos": {
+        "win": "TAB",
+        "mac": "TAB"
+      },
+      "icon": "online:mdi:cube-send",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    }
+  ]
+}

@@ -1,0 +1,277 @@
+{
+  "meta": {
+    "id": "cinema_4d",
+    "name": "Cinema 4D",
+    "author": "SmartDeck",
+    "version": "1.0.0",
+    "description": "Motion graphics tools."
+  },
+  "buttons": [
+    {
+      "label": "Live Select",
+      "type": "key",
+      "combos": {
+        "win": "9",
+        "mac": "9"
+      },
+      "icon": "online:mdi:cursor-default",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Move",
+      "type": "key",
+      "combos": {
+        "win": "E",
+        "mac": "E"
+      },
+      "icon": "online:mdi:cursor-move",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Scale",
+      "type": "key",
+      "combos": {
+        "win": "T",
+        "mac": "T"
+      },
+      "icon": "online:mdi:resize",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Rotate",
+      "type": "key",
+      "combos": {
+        "win": "R",
+        "mac": "R"
+      },
+      "icon": "online:mdi:rotate-3d",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Render View",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+R",
+        "mac": "GUI+R"
+      },
+      "icon": "online:mdi:image",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Render Pic",
+      "type": "key",
+      "combos": {
+        "win": "SHIFT+R",
+        "mac": "SHIFT+R"
+      },
+      "icon": "online:mdi:camera-burst",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Project",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+D",
+        "mac": "GUI+D"
+      },
+      "icon": "online:mdi:cogs",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Obj Mgr",
+      "type": "key",
+      "combos": {
+        "win": "SHIFT+F1",
+        "mac": "SHIFT+F1"
+      },
+      "icon": "online:mdi:format-list-bulleted",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Mat Mgr",
+      "type": "key",
+      "combos": {
+        "win": "SHIFT+F2",
+        "mac": "SHIFT+F2"
+      },
+      "icon": "online:mdi:texture",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Coord Mgr",
+      "type": "key",
+      "combos": {
+        "win": "SHIFT+F7",
+        "mac": "SHIFT+F7"
+      },
+      "icon": "online:mdi:axis-arrow",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Points",
+      "type": "key",
+      "combos": {
+        "win": "ENTER",
+        "mac": "ENTER"
+      },
+      "icon": "online:mdi:dots-grid",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Edges",
+      "type": "key",
+      "combos": {
+        "win": "ENTER",
+        "mac": "ENTER"
+      },
+      "icon": "online:mdi:vector-line",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Polygons",
+      "type": "key",
+      "combos": {
+        "win": "ENTER",
+        "mac": "ENTER"
+      },
+      "icon": "online:mdi:vector-square",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Model",
+      "type": "key",
+      "combos": {
+        "win": "ENTER",
+        "mac": "ENTER"
+      },
+      "icon": "online:mdi:cube-outline",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Extrude",
+      "type": "key",
+      "combos": {
+        "win": "D",
+        "mac": "D"
+      },
+      "icon": "online:mdi:table-column-plus-after",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Bevel",
+      "type": "key",
+      "combos": {
+        "win": "M~S",
+        "mac": "M~S"
+      },
+      "icon": "online:mdi:shape-outline",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Knife",
+      "type": "key",
+      "combos": {
+        "win": "K",
+        "mac": "K"
+      },
+      "icon": "online:mdi:knife",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Frame All",
+      "type": "key",
+      "combos": {
+        "win": "H",
+        "mac": "H"
+      },
+      "icon": "online:mdi:fit-to-screen",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Frame Sel",
+      "type": "key",
+      "combos": {
+        "win": "S",
+        "mac": "S"
+      },
+      "icon": "online:mdi:target",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    }
+  ]
+}

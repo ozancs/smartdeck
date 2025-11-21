@@ -1,0 +1,221 @@
+{
+  "meta": {
+    "id": "adobe_illustrator",
+    "name": "Adobe Illustrator",
+    "author": "SmartDeck",
+    "version": "1.0.0",
+    "description": "Vector design tools."
+  },
+  "buttons": [
+    {
+      "label": "Selection",
+      "type": "key",
+      "combos": {
+        "win": "V",
+        "mac": "V"
+      },
+      "icon": "online:mdi:cursor-default",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Direct Select",
+      "type": "key",
+      "combos": {
+        "win": "A",
+        "mac": "A"
+      },
+      "icon": "online:mdi:cursor-pointer",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Pen Tool",
+      "type": "key",
+      "combos": {
+        "win": "P",
+        "mac": "P"
+      },
+      "icon": "online:mdi:vector-pen",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Type Tool",
+      "type": "key",
+      "combos": {
+        "win": "T",
+        "mac": "T"
+      },
+      "icon": "online:mdi:format-text",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Rectangle",
+      "type": "key",
+      "combos": {
+        "win": "M",
+        "mac": "M"
+      },
+      "icon": "online:mdi:rectangle-outline",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Ellipse",
+      "type": "key",
+      "combos": {
+        "win": "L",
+        "mac": "L"
+      },
+      "icon": "online:mdi:circle-outline",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Brush",
+      "type": "key",
+      "combos": {
+        "win": "B",
+        "mac": "B"
+      },
+      "icon": "online:mdi:brush",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Pencil",
+      "type": "key",
+      "combos": {
+        "win": "N",
+        "mac": "N"
+      },
+      "icon": "online:mdi:lead-pencil",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Gradient",
+      "type": "key",
+      "combos": {
+        "win": "G",
+        "mac": "G"
+      },
+      "icon": "online:mdi:gradient",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Eyedropper",
+      "type": "key",
+      "combos": {
+        "win": "I",
+        "mac": "I"
+      },
+      "icon": "online:mdi:eyedropper",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Artboard",
+      "type": "key",
+      "combos": {
+        "win": "SHIFT+O",
+        "mac": "SHIFT+O"
+      },
+      "icon": "online:mdi:crop-portrait",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Group",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+G",
+        "mac": "GUI+G"
+      },
+      "icon": "online:mdi:group",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Ungroup",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+SHIFT+G",
+        "mac": "GUI+SHIFT+G"
+      },
+      "icon": "online:mdi:ungroup",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Lock Sel",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+2",
+        "mac": "GUI+2"
+      },
+      "icon": "online:mdi:lock",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Unlock All",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+ALT+2",
+        "mac": "GUI+OPT+2"
+      },
+      "icon": "online:mdi:lock-open",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    }
+  ]
+}

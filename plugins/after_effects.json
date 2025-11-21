@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "id": "after_effects",
+    "name": "After Effects",
+    "author": "SmartDeck",
+    "version": "1.0.0",
+    "description": "VFX shortcuts."
+  },
+  "buttons": [
+    {
+      "label": "Selection",
+      "type": "key",
+      "combos": {
+        "win": "V",
+        "mac": "V"
+      },
+      "icon": "online:mdi:cursor-default",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Hand",
+      "type": "key",
+      "combos": {
+        "win": "H",
+        "mac": "H"
+      },
+      "icon": "online:mdi:hand-right",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Zoom",
+      "type": "key",
+      "combos": {
+        "win": "Z",
+        "mac": "Z"
+      },
+      "icon": "online:mdi:magnify",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Rotation",
+      "type": "key",
+      "combos": {
+        "win": "W",
+        "mac": "W"
+      },
+      "icon": "online:mdi:rotate-right",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Camera",
+      "type": "key",
+      "combos": {
+        "win": "C",
+        "mac": "C"
+      },
+      "icon": "online:mdi:video",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Anchor Point",
+      "type": "key",
+      "combos": {
+        "win": "Y",
+        "mac": "Y"
+      },
+      "icon": "online:mdi:crosshairs-gps",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Shape",
+      "type": "key",
+      "combos": {
+        "win": "Q",
+        "mac": "Q"
+      },
+      "icon": "online:mdi:shape",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Pen",
+      "type": "key",
+      "combos": {
+        "win": "G",
+        "mac": "G"
+      },
+      "icon": "online:mdi:pen",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Text",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+T",
+        "mac": "GUI+T"
+      },
+      "icon": "online:mdi:format-text",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Render Q",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+M",
+        "mac": "GUI+M"
+      },
+      "icon": "online:mdi:export",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Preview",
+      "type": "key",
+      "combos": {
+        "win": "SPACE",
+        "mac": "SPACE"
+      },
+      "icon": "online:mdi:play",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Split Layer",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+SHIFT+D",
+        "mac": "GUI+SHIFT+D"
+      },
+      "icon": "online:mdi:content-cut",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    }
+  ]
+}

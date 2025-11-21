@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "id": "vscode",
+    "name": "VS Code",
+    "author": "SmartDeck",
+    "version": "1.0.0",
+    "description": "Coding shortcuts."
+  },
+  "buttons": [
+    {
+      "label": "Cmd Palette",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+SHIFT+P",
+        "mac": "GUI+SHIFT+P"
+      },
+      "icon": "online:mdi:console-line",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Quick Open",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+P",
+        "mac": "GUI+P"
+      },
+      "icon": "online:mdi:file-search",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Terminal",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+`",
+        "mac": "CTRL+`"
+      },
+      "icon": "online:mdi:console",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Sidebar",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+B",
+        "mac": "GUI+B"
+      },
+      "icon": "online:mdi:view-sidebar",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Extensions",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+SHIFT+X",
+        "mac": "GUI+SHIFT+X"
+      },
+      "icon": "online:mdi:puzzle",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Find Files",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+SHIFT+F",
+        "mac": "GUI+SHIFT+F"
+      },
+      "icon": "online:mdi:file-find",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Replace",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+H",
+        "mac": "GUI+ALT+F"
+      },
+      "icon": "online:mdi:find-replace",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Comment",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+/",
+        "mac": "GUI+/"
+      },
+      "icon": "online:mdi:comment-text-outline",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Format Doc",
+      "type": "key",
+      "combos": {
+        "win": "SHIFT+ALT+F",
+        "mac": "SHIFT+OPT+F"
+      },
+      "icon": "online:mdi:format-align-left",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Multi Cursor",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+ALT+DOWN",
+        "mac": "GUI+OPT+DOWN"
+      },
+      "icon": "online:mdi:cursor-text",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Split Editor",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+\\",
+        "mac": "GUI+\\"
+      },
+      "icon": "online:mdi:view-split-vertical",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Zen Mode",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+K Z",
+        "mac": "GUI+K Z"
+      },
+      "icon": "online:mdi:fullscreen",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    }
+  ]
+}

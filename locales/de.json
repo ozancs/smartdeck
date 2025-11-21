@@ -1,0 +1,299 @@
+{
+  "header": {
+    "title": "SmartDeck",
+    "buttons": {
+      "reset": "Zurücksetzen",
+      "import": "Importieren",
+      "export": "Exportieren",
+      "undo": "⟲ Rückgängig",
+      "redo": "⟳ Wiederholen",
+      "settings": "⚙️"
+    }
+  },
+  "device": {
+    "frame": {
+      "title": "Gerätename",
+      "page": "Seite {pageNum}"
+    },
+    "hint": "Zellen ziehen, um sie neu anzuordnen oder zwischen Seiten zu verschieben • Zum Bearbeiten klicken",
+    "settings": {
+      "resolution": "Geräteauflösung",
+      "grid": "Raster (Max)",
+      "deviceName": "Gerätename",
+      "background": "Hintergrund",
+      "button": "Taste",
+      "text": "Text",
+      "stroke": "Kontur",
+      "shadow": "Schatten"
+    },
+    "buttons": {
+      "exportLocal": "Export (Lokal)",
+      "upload": "Einstellungen hochladen"
+    }
+  },
+  "plugins": {
+    "title": "Plugins",
+    "buttons": {
+      "openFolder_title": "Plugin-Ordner öffnen",
+      "reload_title": "Plugins neu laden"
+    },
+    "loading": "Plugins werden geladen...",
+    "none": "Keine Plugins im Ordner /plugins gefunden.",
+    "api_not_ready": "API nicht bereit."
+  },
+  "connection": {
+    "connected": "Verbunden: {deviceName}",
+    "disconnected": "Getrennt",
+    "searching": "Suchen...",
+    "buttons": {
+      "refresh_title": "Aktualisieren"
+    }
+  },
+  "editor": {
+    "title": "Taste – Zelle {cellNum}",
+    "previewTitle": "Vorschau (110×110)",
+    "iconLabel": "Symbol (PNG/JPG/SVG/WebP)",
+    "iconPlaceholder": "Tippen, um Online-Symbole zu suchen...",
+    "iconBrowse": "📁 Lokale Datei",
+    "cropTitle": "Bild zuschneiden & skalieren",
+    "zoom": "Zoom",
+    "useIcon": "Symbol verwenden",
+    "iconHint": "Wenn kein Symbol ausgewählt ist, wird nur Text angezeigt.",
+    "textLabel": "Text-Titel",
+    "textPlaceholder": "Titel der Taste",
+    "positionLabel": "Position",
+    "posTop": "Oben",
+    "posMid": "Mitte",
+    "posBot": "Unten",
+    "labelColor": "Textfarbe",
+    "iconColor": "Symbolfarbe",
+    "buttonColor": "Tastenfarbe",
+    "textSize": "Textgröße",
+    "iconScale": "Symbolgröße",
+    "reset": "Zurücksetzen",
+    "actionTypeLabel": "Aktionstyp",
+    "action": {
+      "key": "Tastenkürzel",
+      "goto": "Seite",
+      "toggle": "Umschalten",
+      "text": "Text",
+      "app": "Öffnen",
+      "timer": "Timer",
+      "script": "Skript",
+      "website": "Webseite",
+      "media": "Medien",
+      "mouse": "Maus",
+      "counter": "Zähler",
+      "sound": "Ton"
+    },
+    "toggle": {
+      "stateA": "Status A (AUS)",
+      "stateADesc": "Standardzustand",
+      "stateB": "Status B (AN)",
+      "stateBDesc": "Aktiver Zustand",
+      "preset": "Voreinstellungen...",
+      "shortcutPlaceholder": "Kürzel oder Skript...",
+      "capture": "Erfassen",
+      "clear": "Löschen",
+      "visuals": "Aktive Optik (Nur Status B)",
+      "bgColor": "Hintergrundfarbe",
+      "iconColor": "Symbolfarbe",
+      "activeIcon": "Aktives Symbol (Optional)",
+      "searchIcon": "Symbol suchen...",
+      "playSound": "Umschalton abspielen",
+      "playSoundDesc": "Sie können den Umschalton in den Einstellungen ändern."
+    },
+    "media": {
+      "label": "Medienaktion",
+      "play": "Play/Pause",
+      "mute": "Stumm",
+      "vol_up": "Lauter",
+      "prev": "Zurück",
+      "next": "Vor",
+      "vol_down": "Leiser"
+    },
+    "sound": {
+      "file": "Audiodatei",
+      "placeholder": "Audiodatei auswählen...",
+      "browse": "Durchsuchen",
+      "volume": "Lautstärke ({percent}%)"
+    },
+    "counter": {
+      "start": "Startwert",
+      "action": "Aktion",
+      "inc": "Erhöhen (+)",
+      "dec": "Verringern (-)",
+      "hint": "Langes Drücken auf dem Gerät setzt den Zähler auf den Startwert zurück."
+    },
+    "mouse": {
+      "event": "Ereignis",
+      "events": {
+        "click": "Klick",
+        "double_click": "Doppelklick",
+        "move": "Bewegen",
+        "drag": "Ziehen & Ablegen"
+      },
+      "button": "Maustaste",
+      "buttons": {
+        "left": "Links",
+        "right": "Rechts",
+        "middle": "Mitte"
+      },
+      "posMove": "Position (Ziel)",
+      "posDragStart": "Ziehen von (Start)",
+      "posDragEnd": "Ablegen bei (Ende)",
+      "xaxis": "X-Achse",
+      "yaxis": "Y-Achse",
+      "capture": "Erfassen",
+      "captureStart": "Start erfassen",
+      "captureEnd": "Ende erfassen",
+      "realtime": "Aktuell: X: {x}, Y: {y}"
+    },
+    "website": {
+      "label": "Webseiten-URL",
+      "placeholder": "https://www.google.com"
+    },
+    "app": {
+      "label": "Anwendung",
+      "select": "App auswählen...",
+      "browse": "Durchsuchen",
+      "hint": "Aus Liste wählen ODER manuell suchen."
+    },
+    "key": {
+      "label": "Tastenkombination",
+      "win": "WIN",
+      "enter": "ENTER",
+      "capture": "Erfassen",
+      "placeholder": "z.B. STRG+ALT+ENTF"
+    },
+    "goto": {
+      "label": "Zielseite"
+    },
+    "textMacro": {
+      "label": "Zu tippender Text",
+      "hint": "Für Zeilenumbruch 'Enter' drücken (sendet 'Enter'-Taste)",
+      "placeholder": "Textmakro hier eingeben...",
+      "simulate": "Tippen simulieren",
+      "simulateHint": "Sendet das Makro als einzelne Tastenanschläge statt über die Zwischenablage. Nützlich für Apps, die Kopieren/Einfügen blockieren."
+    },
+    "timer": {
+      "label": "Timer-Dauer",
+      "minutes": "Minuten",
+      "seconds": "Sekunden"
+    },
+    "script": {
+      "label": "Benutzerdefiniertes Skript (CMD)",
+      "hint": "Wird in der Windows-Shell (cmd) ausgeführt",
+      "placeholder": "z.B. taskkill /f /im chrome.exe\ncalc",
+      "hintNircmd": "*Audio-Voreinstellungen erfordern, dass ",
+      "hintNircmdLink": " sich im PATH Ihres Systems befindet."
+    },
+    "picker": {
+      "title": "Symbol auswählen (Online)",
+      "placeholder": "Suche 100.000+ Symbole (z.B. home, settings)...",
+      "status": "Oben tippen zum Suchen...",
+      "close": "Schließen"
+    },
+    "clear": "Löschen",
+    "copy": "Kopieren",
+    "paste": "Einfügen",
+    "cancel": "Abbrechen",
+    "apply": "Anwenden"
+  },
+  "alerts": {
+    "reset": {
+      "title": "Alle Einstellungen zurücksetzen",
+      "message": "WARNUNG: Dies löscht alle Ihre Seiten, Tasten und Einstellungen und setzt alles auf den Standard zurück.\n\nSind Sie sicher? Stellen Sie sicher, dass Sie Ihre Einstellungen gesichert haben."
+    },
+    "pageFull": {
+      "title": "Verschieben fehlgeschlagen",
+      "message": "Seite ist voll. Auf eine bestehende Taste ziehen, um zu tauschen, oder auf eine leere Zelle ziehen."
+    },
+    "deletePage": {
+      "title": "Seite löschen",
+      "message": "Möchten Sie Seite '{pageName}' wirklich löschen?\nAlle Tasten auf dieser Seite gehen verloren.",
+      "error_min_pages": "Sie müssen mindestens eine Seite haben."
+    }
+  },
+  "settings": {
+    "title": "⚙️ Anwendungseinstellungen",
+    "startup": "Mit Windows starten",
+    "startupDesc": "Beim Anmelden automatisch minimiert in der Taskleiste starten.",
+    "closeAction": "Beim Klick auf 'X' (Schließen)",
+    "closeOptions": {
+      "ask": "Immer fragen (Bestätigung anzeigen)",
+      "minimize": "In Taskleiste minimieren (Läuft weiter)",
+      "exit": "Anwendung sofort beenden"
+    },
+    "sounds": "Toneinstellungen",
+    "soundsToggle": "Standard-Umschalton",
+    "soundsTogglePlaceholder": "Standard (switch.wav)",
+    "soundsTimer": "Timer-Benachrichtigungston",
+    "soundsTimerPlaceholder": "Standard (notification.wav)",
+    "browse": "Durchsuchen",
+    "reset_sound": "Zurücksetzen",
+    "screen": "Bildschirm & Geräteeinstellungen",
+    "brightness": "Bildschirmhelligkeit",
+    "sleep": "Bildschirm-Ruhezustand (Abdunkeln)",
+    "sleepDesc": "Bildschirm nach Inaktivität abdunkeln, um Strom zu sparen.",
+    "done": "Fertig"
+  },
+  "prompt": {
+    "renamePage": {
+      "title": "Seite {pageNum} umbenennen",
+      "label": "Neuer Seitenname:"
+    },
+    "addPage": {
+      "title": "Neue Seite hinzufügen",
+      "label": "Neuer Seitenname:",
+      "default": "Seite {pageNum}"
+    }
+  },
+  "dialogs": {
+    "confirm": {
+      "defaultTitle": "Bestätigung",
+      "defaultOK": "OK"
+    },
+    "prompt": {
+      "defaultTitle": "Wert eingeben",
+      "defaultLabel": "Wert:"
+    },
+    "alert": {
+      "defaultTitle": "Info",
+      "defaultMessage": "Nachricht kommt hierher.",
+      "defaultDismiss": "Schließen"
+    }
+  }
+  ,
+  "footer": {
+    "installFirmware": "Firmware installieren"
+  },
+  "firmware": {
+    "title": "Firmware installieren",
+    "selectModel": "1. Bildschirmmodell wählen",
+    "selectPort": "2. COM-Port wählen",
+    "scanning": "Suchen...",
+    "warning": "* Bitte trennen Sie zuerst die App-Verbindung, falls verbunden.",
+    "startBtn": "FLASHEN STARTEN",
+    "btnFlashing": "WIRD GEFLASHT... NICHT TRENNEN!",
+    "logLabel": "Prozessprotokoll:",
+    "logWaiting": "Warten auf Start...",
+    "alerts": {
+      "invalidPortTitle": "Auswahlfehler",
+      "invalidPort": "Bitte wählen Sie zuerst einen gültigen COM-Port.",
+      "successTitle": "Erfolg!",
+      "success": "Firmware erfolgreich aktualisiert! Gerät wird neu gestartet.",
+      "failedTitle": "Fehlgeschlagen",
+      "failed": "Firmware-Update fehlgeschlagen. Bitte prüfen Sie das Protokoll für Details."
+    },
+    "logs": {
+      "autoDisconnect": "Automatische Trennung von der App, um den Port freizugeben.",
+      "successReboot": "--- ERFOLG! Gerät startet neu... ---",
+      "failedCheck": "--- FEHLGESCHLAGEN! Protokolle oben prüfen. ---"
+    }
+  },
+  "update": {
+    "downloading": "Wird heruntergeladen...",
+    "ready": "Update bereit (Neustart)"
+  }
+}

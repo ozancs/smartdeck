@@ -1,0 +1,221 @@
+{
+  "meta": {
+    "id": "adobe_premiere",
+    "name": "Adobe Premiere",
+    "author": "SmartDeck",
+    "version": "1.0.0",
+    "description": "Video editing shortcuts."
+  },
+  "buttons": [
+    {
+      "label": "Selection",
+      "type": "key",
+      "combos": {
+        "win": "V",
+        "mac": "V"
+      },
+      "icon": "online:mdi:cursor-default",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Razor Tool",
+      "type": "key",
+      "combos": {
+        "win": "C",
+        "mac": "C"
+      },
+      "icon": "online:mdi:content-cut",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Ripple Edit",
+      "type": "key",
+      "combos": {
+        "win": "B",
+        "mac": "B"
+      },
+      "icon": "online:mdi:arrow-expand-horizontal",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Track Select",
+      "type": "key",
+      "combos": {
+        "win": "A",
+        "mac": "A"
+      },
+      "icon": "online:mdi:arrow-right-bold",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Pen Tool",
+      "type": "key",
+      "combos": {
+        "win": "P",
+        "mac": "P"
+      },
+      "icon": "online:mdi:pen",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Hand Tool",
+      "type": "key",
+      "combos": {
+        "win": "H",
+        "mac": "H"
+      },
+      "icon": "online:mdi:hand-right",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Type Tool",
+      "type": "key",
+      "combos": {
+        "win": "T",
+        "mac": "T"
+      },
+      "icon": "online:mdi:format-text",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Mark In",
+      "type": "key",
+      "combos": {
+        "win": "I",
+        "mac": "I"
+      },
+      "icon": "online:mdi:import",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Mark Out",
+      "type": "key",
+      "combos": {
+        "win": "O",
+        "mac": "O"
+      },
+      "icon": "online:mdi:export",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Add Edit",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+K",
+        "mac": "GUI+K"
+      },
+      "icon": "online:mdi:scissors-cutting",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Ripple Del",
+      "type": "key",
+      "combos": {
+        "win": "SHIFT+DEL",
+        "mac": "SHIFT+DEL"
+      },
+      "icon": "online:mdi:delete-sweep",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Play/Stop",
+      "type": "key",
+      "combos": {
+        "win": "SPACE",
+        "mac": "SPACE"
+      },
+      "icon": "online:mdi:play-pause",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Render In/Out",
+      "type": "key",
+      "combos": {
+        "win": "ENTER",
+        "mac": "ENTER"
+      },
+      "icon": "online:mdi:movie-open-check",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Export Media",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+M",
+        "mac": "GUI+M"
+      },
+      "icon": "online:mdi:export-variant",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Save",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+S",
+        "mac": "GUI+S"
+      },
+      "icon": "online:mdi:content-save",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    }
+  ]
+}

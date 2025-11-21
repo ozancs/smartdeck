@@ -1,0 +1,2504 @@
+/* style.css (FULL CONTENT) */
+:root {
+  color-scheme: dark;
+  --bg: #0b0b0b;
+  --panel: #141414;
+  --border: #2a2a2a;
+  --accent: #2b8cff;
+  --danger: #e14c4c;
+  --text: #fff;
+  --muted: #9aa0a6;
+  --warning: #facc15;
+  /* Yellow warning color */
+  --btn-radius: 24px;
+  /* UPDATED: --c-stroke added */
+  --c-bg: #101010;
+  --c-btn: #202020;
+  --c-text: #ffffff;
+  --c-stroke: #555555;
+  --c-shadow: #000000;
+  /* NEW: Shadow variable added */
+
+  --cols: 5;
+  --rows: 3;
+  --gapx: 12px;
+  --gapy: 12px;
+  --padx: 20px;
+  --pady: 20px;
+
+  --dev-w: 800px;
+  --dev-h: 480px;
+  --cell-w: 110px;
+
+  /* NEW: Vertical spacing will come from app.js */
+  --pady-top: 20px;
+  --pady-bottom: 20px;
+
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+
+* {
+  box-sizing: border-box
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  /* Background color */
+  background: var(--bg);
+  color: var(--text);
+
+  /* Hide scrollbars */
+  overflow: hidden !important;
+
+  /* Flexbox Settings */
+  display: flex;
+  justify-content: center;
+  /* CENTER horizontally */
+  align-items: flex-start;
+  /* TOP aligned vertically */
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  overflow: hidden;
+}
+
+.layout {
+  display: grid;
+  gap: 14px;
+
+  /* Header at top, Device (left) and Plugins (right) below, Footer at bottom */
+  grid-template-areas:
+    "header header"
+    "device plugins"
+    "footer footer";
+
+  /* Left side flexible (remaining space), Right side fixed (320px) */
+  grid-template-columns: 1fr 320px;
+
+  /* Row heights: Header(auto) - Content(1fr/fill) - Footer(auto) */
+  grid-template-rows: auto 1fr auto;
+
+  padding: 16px;
+  max-width: 1400px;
+  /* Increased width to fit wide screens */
+  margin: 0 auto;
+  height: 100vh;
+  /* Full screen height */
+  box-sizing: border-box;
+}
+
+/* style.css (~satır 249) */
+/* Toggle Panel Specifics */
+.small-capture-btn {
+  padding: 8px 12px;
+  font-size: 13px;
+  height: 38px;
+  white-space: nowrap;
+}
+
+.small-clear-btn {
+  padding: 8px 12px;
+  font-size: 13px;
+  height: 38px;
+  color: var(--danger);
+  border-color: var(--border);
+}
+
+.small-clear-btn:hover {
+  background: var(--danger);
+  color: white;
+  border-color: var(--danger);
+}
+
+.page-pill {
+  position: relative;
+  /* Required for absolute positioning */
+  min-width: 36px;
+  /* ... rest of style same ... */
+}
+
+.main-header {
+  grid-area: header;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+  margin-left: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.main-header h1 {
+  margin: 0;
+  font-size: 24px;
+  color: var(--text);
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.device {
+  width: 100%;
+  /* height: 100%; <-- Canceling this so it takes up space based on content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Center device frame horizontally */
+  gap: 20px;
+  /* Add distance between device and settings below */
+}
+
+
+/* Make add button same height as others */
+#addSerialPortBtn {
+  height: 40px;
+  font-size: 20px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.sidebar-header {
+  padding: 3px 15px;
+  border-bottom: 1px solid var(--border);
+  background: #1a1a1a;
+  display: flex;
+  /* justify-content: space-between; <-- DELETED */
+  gap: 10px;
+  /* <-- ADDED (Adds space between title and folder) */
+  align-items: center;
+  min-height: 20px;
+}
+
+.sidebar h3 {
+  margin: 0;
+}
+
+#icons,
+#pickerList {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.icon-folder {
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 5px;
+}
+
+.icon-folder:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.icon-folder summary {
+  padding: 8px 5px;
+  cursor: pointer;
+  list-style: none;
+  font-weight: 600;
+  color: var(--muted);
+  position: relative;
+  transition: background-color 0.2s;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.icon-folder summary:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.icon-folder summary::before {
+  content: '▶';
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 8px;
+  transition: transform 0.2s;
+}
+
+.icon-folder[open]>summary::before {
+  transform: rotate(90deg);
+}
+
+.icon-list-inner {
+  list-style: none;
+  padding: 10px 5px;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.icon-list-inner li {
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding: 2px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #161616;
+}
+
+#pickerList .icon-list-inner li {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+#pickerList .icon-list-inner li:hover {
+  border-color: var(--accent);
+}
+
+.icon-list-inner .thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+  background: #111;
+}
+
+/* * UPDATE: FROM HERE ONWARDS 
+ * .device-frame, .grid and .web-device-bar styles changed for "single box" appearance.
+*/
+
+/* 1. Main container (.device-frame) will now be the single visible box */
+/* UPDATE EXISTING .device-frame CODE IN style.css WITH THIS */
+
+.device-frame {
+  width: var(--dev-w);
+  height: var(--dev-h);
+
+  /* Clarify background color */
+  background-color: var(--c-bg);
+
+  /* Make border more prominent */
+  border: 4px solid #333;
+  /* Thicker border */
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  overflow: hidden;
+  flex-shrink: 0;
+  transform-origin: top center;
+  transition: transform 0.2s ease-out;
+
+  /* --- NEW: STRONG SHADOW (For Rectangle feel) --- */
+  box-shadow:
+    0 0 0 2px rgba(0, 0, 0, 0.5),
+    /* Inner thin contour */
+    0 20px 50px rgba(0, 0, 0, 0.7);
+  /* Outer deep shadow */
+
+  margin-bottom: 20px;
+  /* Don't stick to settings below */
+}
+
+/* 2. Remove Grid's own borders and background */
+.grid {
+  width: 100%;
+  /* Use container's width */
+
+  /* --- FIX: Height should NOT be 480px, should fill remaining space --- */
+  flex-grow: 1;
+  min-height: 0;
+  /* For flex-grow to work properly */
+
+  /* Remove own styles (now inheriting from .device-frame) */
+  background: transparent;
+  border: none;
+  border-radius: 0;
+
+  /* Grid structure stays the same */
+  display: grid;
+  grid-template-columns: repeat(var(--cols), var(--cell-w));
+  grid-template-rows: repeat(var(--rows), var(--cell-w));
+  column-gap: var(--gapx);
+  row-gap: var(--gapy);
+
+  /* --- UPDATE HERE: Use separate left/right padding variables --- */
+  /* padding: var(--pady-top) var(--padx) var(--pady-bottom) var(--padx); <-- OLD */
+  padding: var(--pady-top) var(--padx-right) var(--pady-bottom) var(--padx-left);
+  /* <-- NEW (Order: top right bottom left) */
+
+  box-sizing: border-box;
+  /* Required for 100% width and padding */
+}
+
+/* 3. Remove Header and Footer bars' own borders */
+.web-device-bar {
+  width: 100%;
+  /* Use container's width */
+  height: 40px;
+  flex-shrink: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  color: var(--c-text);
+  display: flex;
+  align-items: center;
+
+  /* --- FIX: Reverted to 'center' --- */
+  justify-content: center;
+
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: 700;
+  box-sizing: border-box;
+  transition: width 0.2s ease-out;
+}
+
+/* Positioning for IP address in footer bar */
+#web-footer-bar {
+  position: relative;
+  /* Required for 'absolute' positioning */
+}
+
+#web-ip-address {
+  font-size: 12px;
+  font-weight: normal;
+  color: var(--c-text);
+
+  /* --- FIX: Reverted to original 'absolute' positioning --- */
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* * UPDATE END
+ * Remaining styles (buttons, settings, etc.) stay the same
+*/
+
+.cell {
+  position: relative;
+  width: var(--cell-w);
+  height: var(--cell-w);
+  border-radius: var(--btn-radius);
+  /* NEW */
+  /* Removing cell's own border and background, 
+     only shadow and button should be visible */
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  /* NEW: For shadow to be visible */
+  cursor: grab;
+  transition: width 0.2s ease-out, height 0.2s ease-out;
+}
+
+.cell:hover {
+  /* border-color: #444; */
+  /* Kaldırıldı */
+}
+
+.cell.dragover {
+  border: 2px solid var(--accent) !important;
+  box-shadow: 0 0 8px rgba(43, 140, 255, 0.5);
+  background: rgba(43, 140, 255, 0.1);
+  /* Visual feedback for dragging */
+}
+
+.btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--cell-w);
+  height: var(--cell-w);
+  padding: 0;
+  border-radius: var(--btn-radius);
+  /* YENİ */
+  background: var(--c-btn);
+  border: 2px solid var(--c-stroke);
+  color: var(--c-text);
+  font-weight: 600;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  /* 'all' olarak değiştirildi */
+
+  /* YENİ: Gölge eklendi (.ino'daki gibi 5px ofsetli) */
+  box-shadow: 5px 5px 0px 0px var(--c-shadow);
+}
+
+/* NEW: Remove shadow while dragging */
+.cell.dragging .btn {
+  box-shadow: none;
+  transform: scale(0.95);
+}
+
+
+.previewBtn.btn {
+  width: 110px;
+  height: 110px;
+  box-shadow: 5px 5px 0px 0px var(--c-shadow);
+  /* Shadow added to preview too */
+}
+
+
+.btn .icon-img,
+#previewIcon {
+  /* For both button and preview */
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  /* Default values */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Defaults for masking */
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  transform-origin: center;
+  transition: transform 0.1s ease-out;
+  pointer-events: none;
+}
+
+.btn .label {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+  padding: 0 6px;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  white-space: normal;
+  max-width: 92%;
+  overflow-wrap: break-word;
+  word-break: normal;
+  pointer-events: none;
+}
+
+.btn .label.top {
+  top: 6px;
+  transform: translateX(-50%)
+}
+
+.btn .label.bottom {
+  top: auto;
+  bottom: 6px;
+  transform: translateX(-50%)
+}
+
+.plus {
+  width: var(--cell-w);
+  height: var(--cell-w);
+  border-radius: var(--btn-radius);
+  /* YENİ */
+  border: 1px solid var(--c-stroke);
+  color: #e5e7eb;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  /* 'all' olarak değiştirildi */
+
+  /* YENİ: Gölge eklendi (.ino'daki gibi 5px ofsetli) */
+  box-shadow: 5px 5px 0px 0px var(--c-shadow);
+}
+
+.pagebar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  flex-wrap: wrap
+}
+
+.page-pill {
+  position: relative;
+  min-width: 36px;
+  height: 36px;
+  padding: 0 12px;
+  background: #202020;
+  border: 1px solid #2b2b2b;
+  border-radius: 999px;
+  color: #d0d0d0;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer
+}
+
+.page-pill.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: transparent
+}
+
+.page-pill.add {
+  background: transparent;
+  border-style: dashed;
+  opacity: .9
+}
+
+.page-pill .close {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: #2d2d2d;
+  color: #fff;
+  border: 1px solid #444;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  line-height: 1
+}
+
+.page-pill:hover .close {
+  display: flex
+}
+
+.page-pill .page-edit-btn {
+  /* NEW CLASS USED */
+  position: absolute;
+  top: -6px;
+  /* Move outside (like X button) */
+  left: -6px;
+  /* Position to top left */
+  width: 20px;
+  /* Size */
+  height: 20px;
+  border-radius: 999px;
+  /* Make round */
+  background: #2d2d2d;
+  /* Background color */
+  color: #fff;
+  /* Icon color */
+  border: 1px solid #444;
+  display: none;
+  /* Hide by default */
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  /* Shrink icon */
+  line-height: 1;
+  font-style: normal;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Only show on hover */
+.page-pill:hover .page-edit-btn {
+  display: flex;
+}
+
+/* Hover effect */
+.page-pill .page-edit-btn:hover {
+  background: var(--accent);
+  /* Theme accent color */
+  border-color: transparent;
+  color: #fff;
+}
+
+.page-pill.active:hover .edit-name:hover {
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+
+.cell .close {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 25px;
+  height: 25px;
+  border-radius: 999px;
+  background: rgba(45, 45, 45, 0.7);
+  color: #fff;
+  border: 1px solid #444;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.cell:hover .close {
+  display: flex;
+}
+
+
+.settings {
+  margin-top: 10px;
+  border-top: 1px dashed #2a2a2a;
+  padding-top: 10px
+}
+
+.row.inline {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.control-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+#buttonControls {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.control label {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 4px
+}
+
+#gridControl,
+#resControl {
+  margin-right: 20px;
+}
+
+
+.wifi-settings-row .control-group {
+  width: 100%;
+}
+
+
+.row label {
+  margin-bottom: 4px;
+  /* Standard spacing below label */
+  display: block;
+  /* Labels on their own line */
+  min-height: 14px;
+  /* Label takes up space even if empty */
+}
+
+.icon-source-status {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#iconStatusIndicator {
+  font-size: 12px;
+  color: var(--muted);
+  flex: 1;
+}
+
+#iconStatusIndicator.status-ok {
+  color: #65c76a;
+}
+
+#iconStatusIndicator.status-warning {
+  color: var(--warning);
+}
+
+#iconStatusIndicator.status-error {
+  color: var(--danger);
+}
+
+
+.ghost {
+  background: #1d1d1d;
+  color: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 8px 12px;
+  cursor: pointer
+}
+
+.primary {
+  background: var(--accent);
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 8px 12px;
+  cursor: pointer
+}
+
+.danger {
+  background: var(--danger);
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 8px 12px;
+  cursor: pointer
+}
+
+.refresh-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  width: 25px;
+  height: 25px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.refresh-btn:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+}
+
+.refresh-btn.small {
+  height: 33px;
+  width: 33px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+/* style.css (dosyanın en sonu) */
+
+/* --- NEW: Media Button Group Styles --- */
+.media-seg {
+  display: flex;
+  flex-wrap: wrap;
+  /* Split 6 buttons into 2 (or 3) rows */
+  justify-content: center;
+  /* Center buttons */
+  gap: 8px;
+  /* Space between buttons */
+}
+
+.media-seg .seg-btn {
+  flex: 1 1 30%;
+  /* Adjust to fit 3 buttons */
+  display: flex;
+  /* To align icon and text */
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  /* Space between icon and text */
+  min-width: 120px;
+  /* Prevent them from getting too small */
+  font-size: 13px;
+  /* Slightly reduce text */
+}
+
+/* Icon style */
+.media-seg .seg-btn i {
+  font-style: normal;
+  font-size: 1.1em;
+  line-height: 1;
+}
+
+dialog {
+  border: none;
+  outline: none;
+  border-radius: 16px;
+  background: #161616;
+  color: #fff;
+  width: min(1200px, 94vw);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, .35);
+  padding: 0
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, .5)
+}
+
+.editor,
+.picker {
+  padding: 16px
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 10px;
+  position: relative;
+  /* <-- ADD THIS */
+}
+
+.row.actions {
+  flex-direction: row;
+  align-items: center
+}
+
+.fld label {
+  font-size: 12px;
+  color: #c7c7c7;
+  margin-bottom: 4px
+}
+
+.fld .text,
+.fld .num,
+#iconPath,
+#combo,
+#appPath,
+textarea.text,
+#toggleOffCombo,
+#toggleOnCombo,
+/* <-- NEW ADDITIONS */
+input.text[type="text"],
+input.text[type="search"],
+input.text[type="password"] {
+  background: #111;
+  color: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  width: 100%;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.fld .num {
+  width: 70px;
+  padding: 8px 6px
+}
+
+.hstack {
+  display: flex;
+  gap: 8px;
+  align-items: center
+}
+
+#labelSizeRange,
+#iconScaleRange {
+  flex: 1;
+  accent-color: var(--accent);
+  max-width: 200px;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 16px;
+  background: #111;
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  outline: none;
+}
+
+#labelSizeRange::-webkit-slider-thumb,
+#iconScaleRange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--accent);
+  cursor: pointer;
+  border: 2px solid #fff;
+}
+
+#labelSizeRange::-moz-range-thumb,
+#iconScaleRange::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--accent);
+  cursor: pointer;
+  border: 2px solid #fff;
+}
+
+.muted {
+  color: #9aa0a6;
+  font-size: 12px
+}
+
+.seg {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap
+}
+
+.seg-btn {
+  margin-top: 5px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  background: #1d1d1d;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer
+}
+
+.seg-btn.active {
+  background: var(--accent);
+  border-color: transparent
+}
+
+#previewIcon {
+  transition: transform 0.1s ease-out;
+}
+
+/* style.css (dosyanın en sonu) */
+
+
+.icon-path {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.icon-path input {
+  flex: 1;
+}
+
+/* Editör içindeki online arama sonuçları */
+.editor-icon-list {
+  max-height: 250px;
+  overflow-y: auto;
+  background: #1a1a1a;
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  padding: 8px;
+
+  /* CHANGE: margin-top removed, top added */
+  /* margin-top: 8px;  <-- Delete this or comment it out */
+
+  display: none;
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  gap: 8px;
+
+  position: absolute;
+  /* NEW: Start right below input field (approx 40px high) */
+  top: 100%;
+  margin-top: 5px;
+  /* Leave a slight gap */
+
+  width: calc(100% - 32px);
+  /* Account for dialog padding */
+  z-index: 100;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Each icon in the list */
+.editor-icon-list li {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #252525;
+  border: 1px solid #333;
+  border-radius: 8px;
+  transition: all 0.1s;
+}
+
+.editor-icon-list li:hover {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.editor-icon-list li img {
+  width: 32px;
+  height: 32px;
+  pointer-events: none;
+}
+
+
+select {
+  background: #1d1d1d;
+  color: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 38px;
+}
+
+input[type="color"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 44px;
+  height: 38px;
+  background-color: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border-radius: 4px;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 4px;
+}
+
+input[type="color"]::-moz-color-swatch {
+  border: none;
+  border-radius: 4px;
+}
+
+input[type="color"].unset,
+#iconColor.unset {
+  background-image: linear-gradient(45deg, #444 25%, transparent 25%),
+    linear-gradient(-45deg, #444 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #444 75%),
+    linear-gradient(-45deg, transparent 75%, #444 75%);
+  background-size: 10px 10px;
+  background-position: 0 0, 0 5px, 5px -5px, -5px 0px;
+}
+
+input[type="color"].unset::-webkit-color-swatch,
+#iconColor.unset::-webkit-color-swatch {
+  background-color: transparent !important;
+}
+
+input[type="color"].unset::-moz-color-swatch,
+#iconColor.unset::-moz-color-swatch {
+  background-color: transparent !important;
+}
+
+
+.mods {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.mod {
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  background: #1d1d1d;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.mod.active {
+  background: var(--accent);
+  border-color: transparent;
+  color: #fff;
+}
+
+.page-chooser {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.picker,
+.editor {
+  position: relative;
+}
+
+.dialog-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  width: 30px;
+  height: 30px;
+  border-radius: 99px;
+  background: #333;
+  color: #fff;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.dialog-close-btn:hover {
+  background: var(--danger);
+  border-color: transparent;
+}
+
+.picker h3,
+.editor h3 {
+  margin-top: 0;
+  margin-right: 30px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+/* UPDATED: New styles for status message */
+#upload-status-row {
+  justify-content: center;
+  /* Center content */
+  padding-top: 5px;
+  /* Separate from buttons */
+  /* Reset this row's default 'align-items: flex-end' property */
+  align-items: center;
+}
+
+.upload-status-message {
+  width: auto;
+  /* Not 100%, based on content */
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+  min-height: 1.2em;
+  transition: color 0.3s ease-out;
+}
+
+.upload-status-message.success {
+  color: #65c76a;
+  /* status-ok color */
+}
+
+.upload-status-message.error {
+  color: var(--danger);
+  /* status-error color */
+}
+
+
+
+/* NEW: Box Wrapping Title, Grid and Footer */
+/* This rule is no longer used, .device-frame rule replaced it. */
+/*
+.device-screen-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+*/
+
+/* --- Picker Tabs --- */
+.picker-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--border);
+}
+
+.picker-tab {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--muted);
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.picker-tab:hover {
+  color: var(--text);
+}
+
+.picker-tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.picker-container {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 300px;
+  /* Give it a fixed height so it doesn't jump */
+}
+
+/* Grid structure for online icon list */
+#onlineList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  gap: 8px;
+}
+
+#onlineList li {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- Whiten Search Results --- */
+
+/* ADD TO BOTTOM OF style.css */
+
+#serialPortSelect {
+  background: #111;
+  color: #fff;
+  padding: 8px 12px;
+  height: 38px;
+  /* Same height as other inputs */
+  cursor: pointer;
+  flex-grow: 1;
+  /* Expand as much as possible */
+}
+
+#addSerialPortBtn {
+  height: 38px;
+  width: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #1d1d1d;
+  border: 1px solid var(--border);
+}
+
+#addSerialPortBtn:hover {
+  background: #333;
+  border-color: var(--accent);
+}
+
+/* style.css dosyanızın en altına ekleyin */
+
+/* Custom confirmation dialog message text style */
+.confirm-message {
+  font-size: 15px;
+  /* Increase readability */
+  line-height: 1.6;
+  /* Open line spacing */
+  color: var(--muted);
+  /* Theme-compatible light gray color */
+  white-space: normal;
+  /* Allow text to wrap normally within window */
+  padding: 10px 0;
+  /* Leave some space top and bottom */
+  max-height: 60vh;
+  /* Prevent window overflow for very long messages */
+  overflow-y: auto;
+  /* Add vertical scrollbar if needed */
+}
+
+/* --- Custom Prompt (Text Input) Dialog Styles --- */
+
+/* Adjust window's general dimensions */
+#customPrompt .picker {
+  min-width: 350px;
+  max-width: 90vw;
+}
+
+/* Adjust spacing below title */
+#customPrompt #promptTitle {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+/* Adjust "Value:" label color and spacing */
+#customPrompt #promptLabel {
+  display: block;
+  font-size: 14px;
+  color: var(--muted);
+  /* Faded text color in theme */
+  margin-bottom: 8px;
+}
+
+/* Adjust text input box width */
+#customPrompt #promptInput {
+  width: 100%;
+  /* Note: Color and border styles already come from '.text' class */
+}
+
+/* Adjust top spacing of bottom button group */
+#customPrompt .actions {
+  margin-top: 25px;
+}
+
+
+/* To distribute color pickers and size settings side by side equally */
+.row.distributed {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* Distribute with equal spacing */
+  gap: 12px;
+  /* Space between them */
+}
+
+.row.distributed .fld {
+  flex: 1;
+  /* Each should be equal width */
+  min-width: 0;
+  /* Prevent overflow */
+}
+
+/* To place Text Title and Position side by side */
+.row.merged {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: flex-end;
+  /* Bottom align */
+}
+
+.row.merged .fld.title-fld {
+  flex: 2;
+  /* Title field should be wider */
+}
+
+.row.merged .fld.pos-fld {
+  flex: 1;
+  /* Position buttons narrower */
+}
+
+.pos-fld .seg {
+  width: 100%;
+}
+
+.pos-fld .seg-btn {
+  flex: 1;
+  /* Buttons distribute equally */
+  text-align: center;
+}
+
+/* Special box for button group */
+.actions-box {
+  margin-top: 15px;
+  /* Some space from top */
+  padding: 12px;
+  background: #1a1a1a;
+  /* Slightly different background */
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.actions-box .row.actions {
+  margin-bottom: 0;
+  /* Reset bottom spacing of row inside */
+}
+
+/* --- NEW ADDED STYLES --- */
+
+/* Grouping Box (Rectangle) */
+.group-box {
+  background: #1a1a1a;
+  /* Slightly lighter tone than main ground */
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 15px;
+  /* Inner spacing */
+  margin-bottom: 15px;
+  /* Distance from element below */
+}
+
+/* Reset bottom spacing of last row inside box */
+.group-box .row:last-child {
+  margin-bottom: 0;
+}
+
+/* Special Alignment for Color Pickers */
+/* First element left, second center, third right aligned */
+.row.colors-row .fld {
+  flex: 1;
+  /* Take equal space */
+  display: flex;
+  flex-direction: column;
+}
+
+.row.colors-row .fld:nth-child(1) {
+  align-items: flex-start;
+}
+
+/* Label Color: Left */
+.row.colors-row .fld:nth-child(2) {
+  align-items: center;
+}
+
+/* Icon Color: Center */
+.row.colors-row .fld:nth-child(3) {
+  align-items: flex-end;
+}
+
+/* Button Color: Right */
+
+/* Special Alignment for Size (Size/Scale) Pickers */
+.row.sizes-row .fld {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.row.sizes-row .fld:nth-child(1) {
+  align-items: flex-start;
+}
+
+/* Text Size: Left */
+.row.sizes-row .fld:nth-child(2) {
+  align-items: flex-end;
+}
+
+/* Icon Scale: Right */
+
+/* Text Position Alignment Issue Solution */
+/* Force bottom alignment of elements in merged row and equalize label height */
+/* Text Position Alignment Issue Solution */
+/* Force bottom alignment of elements in merged row and equalize label height */
+.row.merged {
+  align-items: flex-start !important;
+  /* Let's try flex-start instead of flex-end */
+}
+
+.row.merged .fld {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* Push contents to bottom */
+}
+
+.row.merged label {
+  min-height: 18px;
+  /* Labels take up space even if empty so alignment doesn't break */
+  line-height: 18px;
+}
+
+/* Separator for detail panels inside action box */
+.group-box .action-panel {
+  margin-top: 15px;
+  /* Move away from buttons above */
+  padding-top: 15px;
+  /* Leave space between line and content */
+  border-top: 1px dashed var(--c-stroke);
+  /* Dashed separator line */
+}
+
+
+/* --- NEW: Header Button Groups --- */
+.header-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  /* Wrap to next line on mobile */
+}
+
+.header-button-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--panel);
+  /* Dark background */
+  border: 1px solid var(--border);
+  /* Thin border */
+  border-radius: 10px;
+  /* Rounded corners */
+  padding: 6px 10px;
+  /* Inner spacing */
+  height: 50px;
+  /* Keep all at same height */
+}
+
+/* Reset 'input-group-joined' (Select+Reload) style inside group */
+.header-button-group .input-group-joined {
+  border: none;
+  background: #111;
+  height: 38px;
+}
+
+/* Adjust button height inside group */
+.header-button-group button {
+  height: 38px;
+  padding: 0 12px;
+}
+
+/* Fix background of select in header */
+.header-button-group .input-group-joined select {
+  background: transparent;
+}
+
+/* Status text in header (Now inside connect button) */
+/* If needed, a span like .connect-status-text can be added here */
+#connectStatus {
+  display: none;
+  /* COMPLETELY HIDE OLD TEXT */
+}
+
+/* Additional setting for mobile devices */
+@media (max-width: 659px) {
+  .header-button-group {
+    width: 100%;
+    /* Groups take full width on mobile */
+    justify-content: center;
+  }
+}
+
+/* --- NEW: Capture Button Style --- */
+#captureToggle.capturing {
+  background-color: var(--danger);
+  border-color: transparent;
+  color: #fff;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* --- NEW: Timer Picker Styles (Apple Style - with Scroll Snap) --- */
+.timer-picker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  /* Required for highlight bar */
+  padding: 10px 0;
+
+  /* UPDATED: 5 x 38px = 190px (to show 5 items fully) */
+  height: 190px;
+  overflow: hidden;
+  /* Hide options overflowing from edges */
+}
+
+/* Highlight bar (Gray box in visual) */
+.picker-highlight {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  right: 15px;
+  transform: translateY(calc(-50% + 12px));
+  height: 38px;
+  /* Compatible with option height */
+  background: rgba(120, 120, 128, 0.12);
+  /* Apple gray tone */
+  border-radius: 10px;
+  z-index: 1;
+  pointer-events: none;
+  /* Cannot be clicked */
+}
+
+/* Minute and Second columns */
+.picker-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.picker-column label {
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+/* NEW: Scrollable <div.picker-list> Style */
+.picker-list {
+  flex: 1;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 2;
+
+  /* NEW: Snap (Lock) Behavior */
+  scroll-snap-type: y mandatory;
+
+  /* NEW: Hide scrollbar (Firefox) */
+  scrollbar-width: none;
+}
+
+/* NEW: Hide scrollbar (Electron/Chrome) */
+.picker-list::-webkit-scrollbar {
+  display: none;
+  width: 0 !important;
+  background: transparent;
+}
+
+/* NEW: Option (Number) Div Style */
+.picker-list div {
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  font-size: 1.25em;
+  font-weight: 600;
+  color: #fff;
+
+  /* NEW: Each item should lock to center vertically */
+  scroll-snap-align: center;
+}
+
+.timer-colon {
+  font-size: 1.8em;
+  font-weight: 700;
+
+  /* NEW: Pure white */
+  color: #fff;
+
+  /* NEW: Absolute positioning to align with highlight bar */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, calc(-50% + 8px));
+  /* 14px vertical offset */
+
+  z-index: 2;
+  pointer-events: none;
+  /* Cannot be clicked */
+
+  /* OLD styles removed (margin-top, padding) */
+}
+
+/* style.css (end of file) */
+
+
+
+/* --- NEW: Mouse Panel Sub-Group Styles --- */
+.mouse-sub-panel {
+  display: none;
+  /* Hide all sub-panels by default */
+  margin-top: 10px;
+}
+
+.mouse-sub-panel.active {
+  display: block;
+  /* Show the one with 'active' class */
+}
+
+/* For live position tracking */
+#mouseRealtimePos {
+  text-align: center;
+  margin-top: 15px;
+  border-top: 1px dashed var(--c-stroke);
+  padding-top: 10px;
+}
+
+
+/* --- NEW: Mouse Capture Mode Style (FIXED) --- */
+/* Works when app.js adds this class to 'body' */
+body.in-capture-mode {
+  cursor: crosshair !important;
+  /* Make mouse cursor a crosshair */
+
+  /* opacity: 0.1 !important; */
+  /* REMOVED - Makes cursor transparent too */
+  /* pointer-events: none; */
+  /* REMOVED - Prevents clicking */
+
+  /* NEW: Make body invisible, clickable layer */
+  background-color: rgba(0, 0, 0, 0.01) !important;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* style.css (Add to bottom of file) */
+
+/* --- NEW: Settings Dialog Alignment --- */
+
+/* Allows settings row content (text and checkbox) to spread horizontally */
+.settings-row-stretch {
+  width: 100%;
+  /* justify-content: space-between; (Already coming from hstack) */
+}
+
+/* NEW: Toggle Switch Style (Won't work if not in index.html) */
+/* If this switch style is not in index.html, we need to add it: */
+/* If switch style appears in app.js, it should also be in CSS. */
+
+/* Switch Container */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  /* Standard width */
+  height: 25px;
+  /* Standard height */
+  flex-shrink: 0;
+}
+
+/* Hidden Checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--border);
+  /* Off (Gray) */
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 17px;
+  width: 17px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+/* On (Accent Color) */
+input:checked+.slider {
+  background-color: var(--accent);
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px var(--accent);
+}
+
+/* Slider Position */
+input:checked+.slider:before {
+  transform: translateX(20px);
+}
+
+/* Round Style */
+.slider.round {
+  border-radius: 25px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* --- Editor Zoom Setting --- */
+#editor {
+  /* Shrink editor to 90% size (Zoom Out) */
+  zoom: 0.90;
+
+
+
+  /* If it still doesn't fit, show scrollbar (but rarely needed thanks to zoom) */
+  overflow-y: auto;
+}
+
+/* Let's do the same for settings and other large windows */
+#appSettingsDialog .editor {
+  zoom: 0.90;
+
+  overflow-y: auto;
+}
+
+/* style.css - ADD TO BOTTOM */
+
+/* Bottom Connection Bar */
+/* style.css */
+
+.connection-bar {
+  grid-area: footer;
+  margin-top: 0;
+
+  /* --- NEW ADDED VISUAL STYLES --- */
+  background: var(--panel);
+  /* Dark background */
+  border: 1px solid var(--border);
+  /* Border */
+  border-radius: 16px;
+  /* Rounded corners */
+  padding: 10px 20px;
+  /* Inner spacing */
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* Push content to both ends */
+}
+
+/* Status Texts */
+#connStatus {
+  font-size: 14px;
+  font-weight: 600;
+  font-family: monospace;
+  /* For technical appearance */
+}
+
+.conn-connected {
+  color: #2ecc71;
+  /* Green */
+}
+
+.conn-disconnected {
+  color: #e74c3c;
+  /* Red */
+}
+
+.conn-scanning {
+  color: #f1c40f;
+  /* Yellow */
+}
+
+/* Status Dot (LED effect) */
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #555;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.status-dot.connected {
+  background-color: #2ecc71;
+  box-shadow: 0 0 8px #2ecc71;
+}
+
+.status-dot.disconnected {
+  background-color: #e74c3c;
+  box-shadow: 0 0 5px #e74c3c;
+}
+
+.status-dot.scanning {
+  background-color: #f1c40f;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* style.css - ADD TO BOTTOM OR UPDATE */
+
+/* Container for rotating icon */
+.refresh-icon {
+  display: inline-block;
+  /* Required for rotation animation */
+  line-height: 1;
+  /* To align height */
+}
+
+/* When 'spin' class is added to button... */
+.refresh-btn.spin {
+  pointer-events: none;
+  /* Don't allow clicking button */
+  /* animation: spin ... REMOVED FROM HERE */
+}
+
+/* ...only the icon inside should rotate */
+.refresh-btn.spin .refresh-icon {
+  animation: spin 1s linear infinite;
+}
+
+/* Rotation Animation (Stays the same) */
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.crop-container {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  /* was 320px before */
+  background: #050505;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+}
+
+
+.crop-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.crop-wrapper:active {
+  cursor: grabbing;
+}
+
+/* Loaded image */
+#cropImageToEdit {
+  position: absolute;
+  /* transform operations will be done with JS */
+  max-width: none;
+  display: block;
+  pointer-events: none;
+  /* Clicks should go to wrapper */
+  transform-origin: center;
+}
+
+/* style.css BOTTOM */
+
+/* For local images (img tag) to display properly */
+img.icon-img {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-radius: 20px;
+  /* Fits button corners */
+}
+
+/* Masking Trick:
+   Using a massive border with transparent center and semi-transparent black edges
+   to show the center area as "selected".
+*/
+.crop-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* Visible area size (Square proportional to button size) */
+  width: 150px;
+  height: 150px;
+
+  /* Round edges (Button shape) */
+  border-radius: 32px;
+
+  /* Frame where image will appear sharp */
+  border: 2px solid var(--accent);
+
+  /* Trick: Darkening surroundings with a massive shadow */
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.75);
+
+  pointer-events: none;
+  /* Prevent clicking */
+  z-index: 10;
+}
+
+/* style.css BOTTOM */
+
+/* style.css ADD TO BOTTOM */
+
+img.icon-img {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-radius: var(--btn-radius);
+  background-color: transparent !important;
+  /* Force background to be transparent */
+  object-fit: contain;
+  display: block;
+}
+
+/* style.css BOTTOM */
+
+/* For images inside grid cells */
+.btn img.icon-img {
+  position: absolute;
+  /* Absolute positioning */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* Fit image */
+  border-radius: var(--btn-radius);
+  pointer-events: none;
+  background-color: transparent !important;
+  z-index: 1;
+  /* Stay below text */
+}
+
+/* For icons (mask) inside grid cells */
+.btn i.icon-img {
+  position: absolute;
+  /* Absolute positioning */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  /* Stay below text */
+}
+
+/* Text label should always be on top */
+.btn .label {
+  z-index: 2;
+}
+
+/* --- PLUGIN SIDEBAR (RIGHT MENU) --- */
+.plugins-sidebar {
+  grid-area: plugins;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  /* Border */
+  border-radius: 16px;
+  /* Rounded corners */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  /* --- CHANGE: Limit height --- */
+  height: auto;
+}
+
+.sidebar-header {
+  padding: 3px 15px;
+  /* Reduced from 15px to 8px */
+  border-bottom: 1px solid var(--border);
+  background: #1a1a1a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 20px;
+}
+
+.sidebar-header h3 {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.plugins-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+/* style.css UPDATE: Plugin Boxes */
+
+.plugin-item {
+  /* Existing border and background */
+  border: 1px solid var(--border);
+  background: #111;
+
+  /* --- NEW: 5px Spacing and Roundness --- */
+  border-radius: 8px;
+  /* Round corners */
+  margin-bottom: 5px;
+  /* Separate from each other */
+
+  overflow: hidden;
+  /* Content shouldn't overflow */
+}
+
+/* ACCORDION MENU (Details/Summary) */
+.plugin-item summary {
+  padding: 5px 8px;
+  /* Reduced from 12px to 8px */
+  font-size: 13px;
+  /* Font reduced */
+  background: #1d1d1d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.plugin-item summary {
+  padding: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+  background: #1d1d1d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.2s;
+}
+
+.plugin-item summary:hover {
+  background: #252525;
+}
+
+/* Add arrow icon */
+.plugin-item summary::after {
+  content: '▼';
+  font-size: 10px;
+  transition: transform 0.2s;
+}
+
+/* Rotate arrow when open */
+.plugin-item[open] summary::after {
+  transform: rotate(180deg);
+}
+
+/* PLUGIN BUTTONS GRID */
+.plugin-grid {
+  display: grid;
+  /* Made 60px instead of 80px -> Now 4 fit side by side */
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  gap: 8px;
+  /* Spacing reduced */
+  padding: 10px;
+  background: #0b0b0b;
+}
+
+/* 3. LEFT COLUMN WRAPPER (For newly added <section class="device-area">) */
+.device-area {
+  position: relative; /* İçindeki absolute eleman buna göre konumlanacak */
+  grid-area: device;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  /* Vertical scrolling */
+  border: 1px solid var(--border);
+  /* Border */
+  border-radius: 16px;
+  /* Rounded corners */
+  /* IMPORTANT: Space from edges so shadow doesn't get cut */
+  padding: 30px;
+
+  /* Center content */
+  align-items: center;
+  background: var(--panel);
+  /* Dark background */
+
+}
+
+/* DRAGGABLE BUTTON STYLE */
+.plugin-btn-drag {
+  width: 100%;
+  aspect-ratio: 1;
+  background: var(--c-btn);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  /* Corners slightly sharper */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.plugin-btn-drag:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.plugin-btn-drag:active {
+  cursor: grabbing;
+}
+
+/* Icon/image inside button */
+/* style.css UPDATE: Plugin Icons */
+
+.plugin-btn-drag img,
+.plugin-btn-drag i {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  pointer-events: none;
+
+  /* Only normal icons should be white */
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
+
+.plugin-btn-drag img.real-image {
+  /* Remove filter (Original colors) */
+  filter: none !important;
+  opacity: 1 !important;
+
+  /* Fill box completely (If you meant don't resize, don't shrink) */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* or contain, use 'contain' if you don't want image cropped */
+  border-radius: 6px;
+  /* Slightly rounded corners */
+}
+
+/* Text inside button */
+.plugin-btn-drag span {
+  font-size: 10px;
+  /* Reduced from 11px to 10px */
+  line-height: 1.1;
+  color: #aaa;
+}
+
+/* style.css ADD TO BOTTOM */
+
+/* Firmware Log Box */
+.console-log {
+  background-color: #000;
+  color: #0f0;
+  /* Hacker green */
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 11px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  height: 180px;
+  overflow-y: auto;
+  /* Scroll when too many lines */
+  white-space: pre-wrap;
+  /* Break lines properly */
+  line-height: 1.4;
+}
+
+/* Center hstack elements inside dialog */
+#firmwareDialog .hstack {
+  align-items: center;
+}
+
+/* --- NEW FOOTER STYLES (2 BOXES) --- */
+/* --- FINAL FOOTER STYLES --- */
+/* --- FINAL ALIGNED FOOTER STYLES --- */
+
+/* 1. Main Carrier: Using GRID instead of Flex */
+.connection-bar-wrapper {
+  grid-area: footer;
+
+  display: grid;
+  /* SAME COLUMN STRUCTURE AS LAYOUT ABOVE */
+  /* Left side flexible, right side 320px fixed */
+  grid-template-columns: 1fr 320px;
+
+  /* SAME GAP AS SPACING ABOVE */
+  gap: 14px;
+
+  height: 60px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 2. Common Style for Boxes */
+.conn-box {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  box-sizing: border-box;
+  /* Padding shouldn't overflow */
+}
+
+/* 3. Left Box */
+.left-box {
+  /* Push content to both ends: Text on left, refresh button on right */
+  justify-content: space-between;
+}
+
+/* 4. Right Box */
+.right-box {
+  /* Align content to right or center */
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+/* Program Version Text */
+.app-version-text {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 600;
+  font-family: sans-serif;
+  opacity: 0.7;
+  white-space: nowrap;
+  margin-right: auto;
+  /* Open this if you want to push text to left, currently aligned right */
+}
+
+/* Vertical Separator */
+.vert-sep {
+  width: 1px;
+  height: 20px;
+  background-color: var(--border);
+  margin: 0 2px;
+}
+
+/* Refresh button style */
+.refresh-btn.small {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: var(--muted);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.refresh-btn.small:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text);
+}
+
+/* --- NEW: Custom Alert Box Styles --- */
+.custom-alert-dialog {
+  background: var(--bg);
+  /* Your background color */
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  padding: 0;
+  /* Inner padding will be managed by content */
+  width: 380px;
+  /* Fix width */
+  max-width: 90vw;
+  margin: auto;
+  /* Center */
+  overflow: hidden;
+  /* Prevent overflow */
+}
+
+.custom-alert-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+  /* Darken background */
+  backdrop-filter: blur(4px);
+  /* Blur background */
+}
+
+.custom-alert-dialog .alert-content {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Center content */
+  text-align: center;
+}
+
+.custom-alert-dialog h4 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.custom-alert-dialog p {
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+/* Theme color for OK button */
+.custom-alert-dialog #alertOkBtn {
+  background-color: var(--primary);
+  /* Primary color in your theme */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.custom-alert-dialog #alertOkBtn:hover {
+  background-color: var(--accent);
+  /* Accent color in your theme */
+}
+
+.update-footer-container {
+  position: absolute; /* Sayfa akışından çıkar */
+  bottom: 0;          /* En alta yapış */
+  left: 0;            /* Sola yapış */
+  right: 0;           /* Sağa yapış */
+  
+  width: 100%;        /* Tam genişlik */
+  background: #111;   /* Arka plan rengi */
+  
+  /* Üst çizgi */
+  border-top: 1px solid var(--border);
+  
+  /* Alt köşeleri yuvarla (Ana kutuya uyum için) */
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  
+  z-index: 100; /* Diğer her şeyin üstünde dursun */
+}
+
+/* Şerit Buton Stili (Aynen kalıyor) */
+.update-strip {
+  background: transparent;
+  border: none;
+  width: 100%;
+  padding: 15px 0;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.update-strip:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.update-strip.ready {
+  background-color: rgba(46, 204, 113, 0.15);
+  color: #2ecc71;
+  cursor: pointer;
+}
+
+.update-strip.hidden {
+  display: none !important;
+}

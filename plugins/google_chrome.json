@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "id": "google_chrome",
+    "name": "Google Chrome",
+    "author": "SmartDeck",
+    "version": "1.0.0",
+    "description": "Browser controls."
+  },
+  "buttons": [
+    {
+      "label": "New Tab",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+T",
+        "mac": "GUI+T"
+      },
+      "icon": "online:mdi:tab-plus",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Close Tab",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+W",
+        "mac": "GUI+W"
+      },
+      "icon": "online:mdi:tab-remove",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Reopen Tab",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+SHIFT+T",
+        "mac": "GUI+SHIFT+T"
+      },
+      "icon": "online:mdi:undo",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Next Tab",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+TAB",
+        "mac": "CTRL+TAB"
+      },
+      "icon": "online:mdi:tab-unselected",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Prev Tab",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+SHIFT+TAB",
+        "mac": "CTRL+SHIFT+TAB"
+      },
+      "icon": "online:mdi:tab-unselected",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Downloads",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+J",
+        "mac": "GUI+OPT+L"
+      },
+      "icon": "online:mdi:download",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "History",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+H",
+        "mac": "GUI+Y"
+      },
+      "icon": "online:mdi:history",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Incognito",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+SHIFT+N",
+        "mac": "GUI+SHIFT+N"
+      },
+      "icon": "online:mdi:incognito",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Dev Tools",
+      "type": "key",
+      "combos": {
+        "win": "F12",
+        "mac": "GUI+OPT+I"
+      },
+      "icon": "online:mdi:code-tags",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Refresh",
+      "type": "key",
+      "combos": {
+        "win": "F5",
+        "mac": "GUI+R"
+      },
+      "icon": "online:mdi:refresh",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Hard Refresh",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+F5",
+        "mac": "GUI+SHIFT+R"
+      },
+      "icon": "online:mdi:refresh-circle",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    },
+    {
+      "label": "Bookmarks",
+      "type": "key",
+      "combos": {
+        "win": "CTRL+SHIFT+O",
+        "mac": "GUI+OPT+B"
+      },
+      "icon": "online:mdi:bookmark",
+      "labelSize": 18,
+      "labelColor": "#000000",
+      "iconColor": "#ffffff",
+      "btnBgColor": "#5B5B5B",
+      "iconScale": 0
+    }
+  ]
+}
