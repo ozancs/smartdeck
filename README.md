@@ -1,9 +1,9 @@
 # SmartDeck
-
-<div align="center">
 ![Screenshot_15](https://github.com/user-attachments/assets/1aec9e52-7d8d-423a-9e10-12daaef4f580)
 ![Screenshot_16](https://github.com/user-attachments/assets/2d39f30d-3a07-4f91-ad30-1c0c40b035a7)
 ![Screenshot_17](https://github.com/user-attachments/assets/cd9b04b3-6aa7-4df8-9465-15fd3973a675)
+<div align="center">
+
 
 **A powerful, customizable macro deck application for Windows**
 
