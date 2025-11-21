@@ -16,7 +16,9 @@ SmartDeck is a feature-rich desktop application that transforms physical touch s
 ***Correction : ESP32_8048S043 is JC8048W550 Screen's Firmware. (Guition Black PCB, Capatitive 5" 800x480)
 
 5" Guition Capatitive https://www.aliexpress.us/item/3256806529267135.html?gatewayAdapt=glo2usa4itemAdapt
+
 3.5" Capatitive Display https://www.aliexpress.us/item/3256805963246872.html
+
 7" Capatitive Display https://www.tindie.com/products/adz1122/esp32-s3-7-inch-arduino-lcd-lvgl-development-board/?spm=a2g0s.imconversation.0.0.70ae3e5fybmV4K
 
 
