@@ -1,7 +1,6 @@
 # SmartDeck
 ![Screenshot_15](https://github.com/user-attachments/assets/1aec9e52-7d8d-423a-9e10-12daaef4f580)
 ![Screenshot_16](https://github.com/user-attachments/assets/2d39f30d-3a07-4f91-ad30-1c0c40b035a7)
-![Screenshot_17](https://github.com/user-attachments/assets/cd9b04b3-6aa7-4df8-9465-15fd3973a675)
 <div align="center">
 
 
@@ -33,6 +32,7 @@ SmartDeck supports a comprehensive range of button actions:
 10. **Mouse Actions** - Click, double-click, move, and drag operations
 11. **Counter** - Increment/decrement counters with long-press reset
 12. **Sound** - Play audio files with volume control
+![Screenshot_17](https://github.com/user-attachments/assets/cd9b04b3-6aa7-4df8-9465-15fd3973a675)
 
 ### 🎨 **Customization**
 
