@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP32S3 Arduino IDE Settings</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+            margin: 0;
+        }
+        h1 {
+            color: #569cd6;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .info {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #6a9955;
+            font-size: 14px;
+        }
+        table {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: #252526;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        th, td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid #3c3c3c;
+        }
+        th {
+            background-color: #007acc;
+            color: white;
+            font-weight: 600;
+        }
+        tr:hover {
+            background-color: #2a2d2e;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        .setting-name {
+            color: #9cdcfe;
+        }
+        .setting-value {
+            color: #ce9178;
+        }
+        .section-header {
+            background-color: #3c3c3c;
+            color: #dcdcaa;
+            font-weight: bold;
+        }
+        .section-header td {
+            padding: 10px 16px;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <h1>ESP32S3 Dev Module - Arduino IDE Settings</h1>
+    <p class="info">ESP32 Board Version: 2.0.17</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Setting</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Board Settings -->
+            <tr class="section-header">
+                <td colspan="2">Board Settings</td>
+            </tr>
+            <tr>
+                <td class="setting-name">Board</td>
+                <td class="setting-value">ESP32S3 Dev Module</td>
+            </tr>
+            <tr>
+                <td class="setting-name">Port</td>
+                <td class="setting-value">COM7</td>
+            </tr>
+            
+            <!-- USB Settings -->
+            <tr class="section-header">
+                <td colspan="2">USB Settings</td>
+            </tr>
+            <tr>
+                <td class="setting-name">USB CDC On Boot</td>
+                <td class="setting-value">Disabled</td>
+            </tr>
+            <tr>
+                <td class="setting-name">USB DFU On Boot</td>
+                <td class="setting-value">Disabled</td>
+            </tr>
+            <tr>
+                <td class="setting-name">USB Firmware MSC On Boot</td>
+                <td class="setting-value">Disabled</td>
+            </tr>
+            <tr>
+                <td class="setting-name">Upload Mode</td>
+                <td class="setting-value">UART0 / Hardware CDC</td>
+            </tr>
+            <tr>
+                <td class="setting-name">Upload Speed</td>
+                <td class="setting-value">115200</td>
+            </tr>
+            <tr>
+                <td class="setting-name">USB Mode</td>
+                <td class="setting-value">Hardware CDC and JTAG</td>
+            </tr>
+            
+            <!-- CPU & Debug Settings -->
+            <tr class="section-header">
+                <td colspan="2">CPU & Debug Settings</td>
+            </tr>
+            <tr>
+                <td class="setting-name">CPU Frequency</td>
+                <td class="setting-value">240MHz (WiFi)</td>
+            </tr>
+            <tr>
+                <td class="setting-name">Core Debug Level</td>
+                <td class="setting-value">None</td>
+            </tr>
+            <tr>
+                <td class="setting-name">Events Run On</td>
+                <td class="setting-value">Core 1</td>
+            </tr>
+            <tr>
+                <td class="setting-name">Arduino Runs On</td>
+                <td class="setting-value">Core 1</td>
+            </tr>
+            <tr>
+                <td class="setting-name">JTAG Adapter</td>
+                <td class="setting-value">Disabled</td>
+            </tr>
+            
+            <!-- Flash & Memory Settings -->
+            <tr class="section-header">
+                <td colspan="2">Flash & Memory Settings</td>
+            </tr>
+            <tr>
+                <td class="setting-name">Flash Mode</td>
+                <td class="setting-value">QIO 80MHz</td>
+            </tr>
+            <tr>
+                <td class="setting-name">Flash Size</td>
+                <td class="setting-value">16MB (128Mb)</td>
+            </tr>
+            <tr>
+                <td class="setting-name">Partition Scheme</td>
+                <td class="setting-value">Huge APP (3MB No OTA/1MB SPIFFS)</td>
+            </tr>
+            <tr>
+                <td class="setting-name">PSRAM</td>
+                <td class="setting-value">OPI PSRAM</td>
+            </tr>
+            <tr>
+                <td class="setting-name">Erase All Flash Before Sketch Upload</td>
+                <td class="setting-value">Enabled</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
