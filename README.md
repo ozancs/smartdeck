@@ -1,9 +1,13 @@
-# SmartDeck
-![Screenshot_15](https://github.com/user-attachments/assets/1aec9e52-7d8d-423a-9e10-12daaef4f580)
+# SmartDeck v2.1
+
+<img width="2068" height="1741" alt="Ekran görüntüsü 2025-12-06 211021" src="https://github.com/user-attachments/assets/ebf281c7-dcad-42d6-8602-d9dad1fda417" />
+
 <div align="center">
 
-
 **A powerful, customizable macro deck application for Windows**
+
+[![Release](https://img.shields.io/github/v/release/ozancs/smartdeck)](https://github.com/ozancs/smartdeck/releases)
+[![License](https://img.shields.io/github/license/ozancs/smartdeck)](LICENSE)
 
 </div>
 
@@ -11,222 +15,238 @@
 
 ## 📖 Overview
 
-SmartDeck is a feature-rich desktop application that transforms physical touch screens into powerful macro control panels. It provides an intuitive interface for creating custom buttons that can execute keyboard shortcuts, launch applications, control media, run scripts, and much more. Perfect for streamers, content creators, developers, and power users who want to streamline their workflow.
+SmartDeck transforms ESP32-based touch screens into powerful macro control panels. Create custom buttons to execute keyboard shortcuts, launch applications, control media, run scripts, build multi-action sequences, and much more. Perfect for streamers, content creators, developers, and power users.
 
-***Correction : ESP32_8048S043 is JC8048W550 Screen's Firmware. (Guition Black PCB, Capatitive 5" 800x480)
+---
 
-5" Guition Capatitive https://www.aliexpress.us/item/3256806529267135.html?gatewayAdapt=glo2usa4itemAdapt
+## 🖥️ Supported Devices
 
-3.5" Capatitive Display https://www.aliexpress.us/item/3256805963246872.html
+| Status | Device | Description |
+|--------|--------|-------------|
+| ✅ **Supported** | **Guition JC8048W550** | 5" 800x480 Capacitive, ESP32-S3, with rotary encoder ([AliExpress](https://www.aliexpress.us/item/3256806529267135.html)) |
+| 🔜 Coming Soon | 3.5" Capacitive | Community contribution welcome |
+| 🔜 Coming Soon | 7" Capacitive | Community contribution welcome |
 
-7" Capatitive Display https://www.tindie.com/products/adz1122/esp32-s3-7-inch-arduino-lcd-lvgl-development-board/?spm=a2g0s.imconversation.0.0.70ae3e5fybmV4K
+> 💡 **Open Source**: SmartDeck is fully open source. Community members can easily adapt the firmware for other ESP32-based displays. Pull requests welcome!
 
+---
+
+## 🛒 Bill of Materials (BOM)
+
+> ⚠️ **Note**: The following parts are required to build the complete SmartDeck with rotary encoder. The display itself is sold separately - see "Supported Devices" above.
+
+| Part | Description | Link |
+|------|-------------|------|
+| **Guition JC8048W550** | 5" ESP32-S3 Capacitive Display (Main unit) | [AliExpress](https://www.aliexpress.us/item/3256806529267135.html) |
+| **AS5600 Magnetic Encoder** | Rotary encoder module with magnet included | [AliExpress](https://tr.aliexpress.com/item/1005009252608246.html) |
+| **NeoPixel RGB LED Ring** | 16-LED WS2812 ring (53mm inner, 66mm outer) | [AliExpress](https://tr.aliexpress.com/item/33039423907.html) |
+| **25×52×15 Ball Bearing** | Deep-groove ball bearing for smooth rotation | [Link](https://simmering.pl/en/deep-groove-ball-bearings/28183-6205-zz-nectech-25x52x15-deep-groove-ball-bearing.html) |
+| **6×3mm Neodymium Magnets** | Round magnets for encoder (80-150 pcs) | [Temu](https://www.temu.com/tr/80-150pcs-6x3mm-round-magnets-strong-neodymium--mini-refrigerator-whiteboard-magnets-durable-metal-construction-for-office-kitchen-fridge-organization-magnets-for-fridge-kitchen-accessories-sleek-metallic---magnets-g-601101415928711.html) |
+| **1.25mm to Dupont Cable** | 4-pin cable for 5V, GND, external pins (2 pcs) | [AliExpress](https://tr.aliexpress.com/item/1005006621865408.html) |
+| **90° USB-C Adapter** | Right-angle Type-C male to female (40Gbps preferred) | [AliExpress](https://tr.aliexpress.com/item/1005006997812852.html) |
+| **Screws** | Assorted screws for assembly | [Temu](https://www.temu.com/goods.html?_bg_fs=1&goods_id=601099519474986&sku_id=17592228808109) / [AliExpress](https://www.aliexpress.us/item/3256804422855415.html) |
+| **Cables & Wires** | General-purpose wires for connections | — |
+| **Soldering Iron** | For wiring and assembly | — |
+| **Tape** | Insulation tape for cable management | — |
+
+### 🖨️ 3D Printed Parts
+
+STL files for the enclosure are available in the `/3d-models` folder (coming soon).
+
+---
 
 ## ✨ Key Features
 
-### 🎮 **12 Button Action Types**
+### 🎮 **13 Button Action Types**
 
-SmartDeck supports a comprehensive range of button actions:
+<img width="2067" height="1737" alt="Ekran görüntüsü 2025-12-06 211035" src="https://github.com/user-attachments/assets/bb0dc818-fc07-42e8-b35a-f049680b0558" />
 
-1. **HotKey** - Execute keyboard shortcuts (CTRL+C, ALT+TAB, etc.)
-2. **Page Navigation** - Switch between different button pages
-3. **Toggle** - Two-state buttons with visual feedback and custom actions for each state
-4. **Text Macro** - Type predefined text with optional typing simulation
-5. **Open Application** - Launch programs with a single tap
-6. **Timer** - Countdown timers with visual feedback
-7. **Script** - Execute custom command-line scripts
-8. **Website** - Open URLs in your default browser
-9. **Media Controls** - Play/pause, volume, next/previous track controls
-10. **Mouse Actions** - Click, double-click, move, and drag operations
-11. **Counter** - Increment/decrement counters with long-press reset
-12. **Sound** - Play audio files with volume control
+| Action | Description |
+|--------|-------------|
+| **HotKey** | Keyboard shortcuts (CTRL+C, ALT+TAB, etc.) |
+| **Page** | Navigate between button pages |
+| **Toggle** | Two-state buttons with visual feedback |
+| **Text** | Type text with optional realistic typing simulation |
+| **Open App** | Launch applications |
+| **Timer** | Countdown timers with notifications |
+| **Script** | Execute command-line scripts |
+| **Website** | Open URLs in browser |
+| **Media** | Play/pause, volume, track controls |
+| **Mouse** | Click, double-click, move, drag |
+| **Counter** | Increment/decrement with long-press reset |
+| **Sound** | Play audio files with volume control |
+| **Multi-Action** | Chain multiple actions in sequence |
 
+### 🔗 **Multi-Action Builder**
 
-![Screenshot_17](https://github.com/user-attachments/assets/cd9b04b3-6aa7-4df8-9465-15fd3973a675)
+Create complex macros by chaining actions together:
 
-### 🎨 **Customization**
+- **Delay** - Wait between actions (ms precision)
+- **HotKey** - Press key combinations
+- **Text** - Type text strings
+- **Open App** - Launch programs
+- **Website** - Open URLs
+- **Script** - Run commands
+- **Media** - Media controls
+- **Sound** - Play audio
+- **Mouse** - Mouse operations
+- **Go to Page** - Switch pages
 
-- **Visual Customization**: Each button can have custom colors for background, text, icon, stroke, and shadow
-- **Icon Support**: 
-  - Search from 100,000+ online icons via Iconify
-  - Upload local images (PNG, JPG, SVG, WebP)
-  - Built-in crop and scale editor
-- **Text Positioning**: Top, middle, or bottom alignment
-- **Adjustable Sizes**: Icon scale (-100 to +100) and text size (10-28px)
-- **Color Themes**: Customize device background, button colors, and text colors
+Drag & drop interface for easy sequence building.
 
-### 📱 **Multi-Screen Support**
+### 🎛️ **Rotary Encoder Support**
 
-Currently supports three screen sizes with dedicated firmware:
+- Volume control, scrolling, zooming
+- Customizable actions for clockwise/counter-clockwise
+- LED color feedback per page
+- Adjustable sensitivity
+- Modifier key combinations (ALT+Scroll, CTRL+Scroll)
 
-- **3.5-inch** display
-- **5-inch** display  
-- **7-inch** display
+### 🎨 **Full Customization**
 
-### 🔌 **Pre-Built Shortcut Presets**
+- **100,000+ Icons** via Iconify integration
+- **Local Images** with built-in crop & scale editor
+- **Custom Colors** for background, text, icon, stroke, shadow
+- **Text Positioning** - Top, middle, bottom alignment
+- **Per-Button Styling** - Every button fully customizable
 
-Includes ready-to-use shortcut presets for popular applications:
+### 🌍 **7 Languages**
 
-- **Creative Suite**: Adobe Photoshop, Illustrator, Premiere Pro, After Effects
-- **3D & Video**: Blender, Cinema 4D, DaVinci Resolve
-- **Audio**: FL Studio, Spotify
-- **Streaming**: OBS Studio
-- **Development**: VS Code
-- **Utilities**: Google Chrome, Discord, VLC Player
+English • Türkçe • Deutsch • Español • Français • 日本語 • 中文
 
-### 🌍 **Multi-Language Support**
+### ⚡ **Smart Features**
 
-Built-in support for 7 languages:
-- English (en)
-- Turkish (tr)
-- German (de)
-- Spanish (es)
-- French (fr)
-- Japanese (ja)
-- Chinese (zh)
+- **Auto-Connect** - Automatic device detection and reconnection
+- **Smart Upload** - Only uploads changed files (faster sync)
+- **App-Based Pages** - Auto-switch pages based on active application
+- **Sleep/Wake** - Configurable screen timeout with tap-to-wake
+- **Preview Mode** - Test buttons without device (right-click → Test)
+- **Undo/Redo** - Full history with up to 50 steps
+- **Drag & Drop** - Reorder buttons and pages intuitively
+- **System Tray** - Minimize to tray, start minimized option
 
-### 🔄 **Advanced Features**
+### 📦 **Built-in Presets**
 
-- **Undo/Redo System**: Full history tracking with up to 10 steps
-- **Drag & Drop**: Intuitive button reordering and page management
-- **Import/Export**: Save and share your configurations
-- **USB Upload**: Direct settings upload to connected devices
-- **Auto-Updates**: Built-in update system via GitHub releases
-- **Serial Communication**: Real-time connection with hardware devices
-- **Firmware Flasher**: Built-in tool to flash firmware to devices
+Ready-to-use shortcuts for:
+
+- Adobe Suite (Photoshop, Premiere, After Effects, Illustrator)
+- 3D Software (Blender, Cinema 4D)
+- DAWs (FL Studio, DaVinci Resolve)
+- Streaming (OBS Studio)
+- Development (VS Code)
+- General (Chrome, Discord, VLC, Spotify)
+
+---
 
 ## 🚀 Getting Started
 
-### Prerequisites
+### Requirements
 
-- Windows 10 or later
-- Arduino-compatible touch screen (3.5", 5", or 7")
+- Windows 10/11
+- Guition JC8048W550 (or compatible ESP32 display)
 
 ### Installation
 
-1. **Download the latest release** from the [Releases](https://github.com/ozancs/smartdeck/releases) page
-2. **Run the installer** and follow the setup wizard
-3. **Connect your device** via USB
-4. **Flash the firmware** using the built-in firmware installer (⚡ Install Firmware button)
+1. Download latest release from [Releases](https://github.com/ozancs/smartdeck/releases)
+2. Run installer
+3. Connect device via USB
+4. Flash firmware using **⚡ Install Firmware** button
+5. Start creating!
 
+---
 
-![Screenshot_16](https://github.com/user-attachments/assets/2d39f30d-3a07-4f91-ad30-1c0c40b035a7)
+## 🔧 How It Works
 
-
-## 🎯 How It Works
-
-### Application Architecture
-
-SmartDeck consists of three main components:
-
-1. **Desktop Application (Electron)**: The main interface built with HTML, CSS, and JavaScript
-2. **Arduino Firmware**: Runs on the touch screen device, handles display and touch input
-3. **Serial Communication**: Bridges the desktop app and hardware device
-
-### Button Configuration
-
-Each button stores:
-- **Visual Properties**: Icon, label, colors, sizes, positioning
-- **Action Type**: One of 12 available action types
-- **Action Data**: Type-specific configuration (shortcuts, paths, scripts, etc.)
-- **Toggle States**: For toggle buttons, separate configurations for ON/OFF states
-
-### Page System
-
-- Support for multiple pages (grid-based layout)
-- Customizable grid size per device resolution
-- Page navigation buttons
-- Drag-and-drop between pages
+```
+┌─────────────────┐     USB/Serial     ┌──────────────────┐
+│  SmartDeck App  │ ◄───────────────► │  ESP32 Device    │
+│  (Electron)     │    115200 baud     │  (Touch Screen)  │
+└─────────────────┘                    └──────────────────┘
+        │                                       │
+        ▼                                       ▼
+   Button Config                          Display & Touch
+   Action Execute                         Button Rendering
+   Serial Commands                        Touch Events
+```
 
 ### Connection Flow
 
-1. Application scans for available COM ports
-2. User selects the device port
-3. Serial connection established at 115200 baud
-4. Settings synchronized to device
-5. Touch events received and processed in real-time
+1. App scans for COM ports automatically
+2. Sends PING, waits for PONG handshake
+3. Syncs configuration to device
+4. Receives touch events in real-time
+5. Auto-reconnects on disconnect
 
-## 🔧 Configuration
+---
 
-### Device Settings
+## ⚙️ Settings
 
-- **Resolution**: Select your screen size (3.5", 5", or 7")
-- **Grid Layout**: Configure rows and columns (max varies by screen)
-- **Device Name**: Custom name displayed on the device
-- **Color Scheme**: Background, button, text, stroke, and shadow colors
+<img width="2062" height="1731" alt="Ekran görüntüsü 2025-12-06 211042" src="https://github.com/user-attachments/assets/b171f1df-1219-4e9b-91e4-100e76ec5a79" />
 
-### Application Settings
+| Category | Options |
+|----------|---------|
+| **Device** | Name, resolution, grid size, colors |
+| **Screen** | Brightness, sleep timeout |
+| **Knob** | LED colors per page, sensitivity, actions |
+| **Startup** | Launch with Windows, start minimized |
+| **Close** | Exit or minimize to tray |
+| **Sound** | Toggle sound, timer notification |
+| **Language** | 7 language options |
 
-Access via the ⚙️ button:
-
-- **Startup Behavior**: Launch with Windows
-- **Close Action**: Minimize to tray or exit
-- **Sound Settings**: Custom toggle and timer sounds
-- **Screen Settings**: Brightness and sleep timeout
-- **Language**: Choose from 7 supported languages
-
-
-
-## 🎨 Button Types Explained
-
-### Toggle Buttons
-
-Toggle buttons have two states with independent configurations:
-
-- **State A (OFF)**: Default state with custom action and visuals
-- **State B (ON)**: Active state with different action, colors, and optional icon
-- **Sound Feedback**: Optional switch sound on state change
-- **Presets**: Quick setup for common toggles (mute/unmute, monitor on/off, etc.)
-
-### Timer Buttons
-
-- Set duration in minutes and seconds (picker interface)
-- Visual countdown display on the button
-- Notification sound when timer completes
-- Persistent across app restarts
-
-### Counter Buttons
-
-- Increment or decrement mode
-- Custom start value
-- Long-press to reset to start value
-- Real-time display on button
-
-### Mouse Actions
-
-- **Click**: Single, double, or right-click at current position
-- **Move**: Move cursor to specific coordinates
-- **Drag**: Drag from point A to point B
-- **Capture Tool**: Built-in coordinate capture for easy setup
-
-
+---
 
 ## 🛠️ Firmware Installation
 
-1. Click the **⚡ Install Firmware** button in the bottom bar
-2. Select your screen model (3.5", 5", or 7")
-3. Choose the COM port (disconnect from app first if connected)
+1. Click **⚡ Install Firmware**
+2. Select screen model
+3. Choose COM port
 4. Click **START FLASHING**
-5. Wait for completion (do not unplug during flashing!)
-6. Device will automatically reboot
+5. Wait for completion (~60 seconds)
 
+> ⚠️ Do not unplug during flashing!
 
+---
+
+## 📝 What's New in v2.1
+
+- ✅ Multi-Action Builder with drag & drop
+- ✅ Rotary encoder support with LED feedback
+- ✅ Preview/Test mode (right-click menu)
+- ✅ Start minimized to system tray
+- ✅ Unicode path support (Turkish characters, etc.)
+- ✅ App-based automatic page switching
+- ✅ Smart upload (only changed files)
+- ✅ Serial debug monitor
+- ✅ Improved auto-reconnect stability
+- ✅ Full internationalization for all UI elements
+
+---
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit pull requests or open issues for bugs and feature requests.
+Contributions welcome! 
 
+- **Bug Reports**: Open an issue with reproduction steps
+- **Feature Requests**: Describe your idea in an issue
+- **New Device Support**: Fork, adapt firmware, submit PR
+
+## 📄 License
+
+This project is open source. See [LICENSE](LICENSE) for details.
 
 ## 🙏 Acknowledgments
 
-- Icons provided by [Iconify](https://iconify.design/)
-- Audio control presets use [NirCmd](https://www.nirsoft.net/utils/nircmd.html)
-- Built with [Electron](https://www.electronjs.org/)
+- [Iconify](https://iconify.design/) - Icon library
+- [NirCmd](https://www.nirsoft.net/utils/nircmd.html) - Audio control utilities
+- [Electron](https://www.electronjs.org/) - Application framework
+- [@jitsi/robotjs](https://github.com/nicktgr15/robotjs) - Keyboard/mouse automation
 
 ---
 
 <div align="center">
 
-[Report Bug](https://github.com/ozancs/smartdeck/issues) · [Request Feature](https://github.com/ozancs/smartdeck/issues)
+**[⬇️ Download](https://github.com/ozancs/smartdeck/releases)** • **[🐛 Report Bug](https://github.com/ozancs/smartdeck/issues)** • **[💡 Request Feature](https://github.com/ozancs/smartdeck/issues)**
+
+Made with ❤️ by [ozancs](https://github.com/ozancs)
 
 </div>
