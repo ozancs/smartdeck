@@ -54,6 +54,8 @@ SmartDeck transforms ESP32-based touch screens into powerful macro control panel
 STL files for the enclosure are available in the `/3d-models` folder (coming soon).
 
 ---
+![WhatsApp Image 2025-12-06 at 21 16 12](https://github.com/user-attachments/assets/f84371b4-a4a0-4a22-b15e-b090b8de46da)
+
 
 ## ✨ Key Features
 
